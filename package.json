@@ -1,0 +1,22 @@
+{
+  "name": "hangman_cli",
+  "version": "1.0.0",
+  "description": "Hangman with a command-line interface",
+  "main": "hangman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/award3607/hangman_cli.git"
+  },
+  "author": "Andrew Ward",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/award3607/hangman_cli/issues"
+  },
+  "homepage": "https://github.com/award3607/hangman_cli#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1"
+  }
+}
