@@ -4,8 +4,7 @@ var Word = require('./word.js');
 
 //globals
 var wordList = ["Ford", "Chevrolet", "Ferrari", "Lamborghini", "Maserati", "BMW", "Audi", "Mercedes", "Porsche", "Lotus", "McLaren",
-					"Honda", "Toyota", "Mitsubishi", "Subaru", "Nissan", "Datsun", "Mazda", "Volkswagen"];
-var wordList2 = ["Alfa Romeo"];
+					"Honda", "Toyota", "Mitsubishi", "Subaru", "Nissan", "Datsun", "Mazda", "Volkswagen", "Alfa Romeo"];
 
 function Game(words) {
 	this.words = words;
@@ -24,8 +23,6 @@ function Game(words) {
 		this.guessesRemaining = this.wordToGuess.length + 10;
 		this.lettersGuessed = [];
 		this.getInput();
-		//prompt to play again
-		// this.initRound();
 	};
 
 	this.getInput = function() {
@@ -58,7 +55,8 @@ function Game(words) {
 		inquirer.prompt([{
 			type: "confirm",
 			name: "again",
-			message: "Would you like to play again?"
+			message: "Would you like to play again?",
+			default: false
 		}]).then(function(answer) {
 			if (answer.again) {
 				_this.initRound();
